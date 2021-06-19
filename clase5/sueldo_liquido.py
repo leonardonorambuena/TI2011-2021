@@ -9,6 +9,7 @@ Sueldo Líquido          => Sueldo Base – Descto.Afp – Descto. Salud – Imp
 def get_sb():
     try:
         return int(input('Ingrese sueldo base: \n'))
+        # return None
     except:
         print('Debe ingresar solo números')
         return None
@@ -16,10 +17,6 @@ def get_sb():
 def get_afp(sb):
     try:
         op = int(input('Afp: 1- Habitat (11%) 2- Capital (13%)'))
-        # if op <= 0 or op > 2:
-        #     print('Opción incorrecta eliga 1 0 2')
-        #     return 0
-        # res = 0
         if op == 1:
             return sb * .11
         elif op == 2:
